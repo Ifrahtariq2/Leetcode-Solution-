@@ -9,7 +9,7 @@ class Solution:
                 peak = mid
             if arr[mid] > arr[mid +1] and mid < len(arr) -1:
                 rt = mid -1
-            elif arr[mid] < arr[mid +1] and mid < len(arr) -1:
+            if arr[mid] < arr[mid +1] and mid < len(arr) -1:
                 lf = mid + 1
         return peak                                                    
         
