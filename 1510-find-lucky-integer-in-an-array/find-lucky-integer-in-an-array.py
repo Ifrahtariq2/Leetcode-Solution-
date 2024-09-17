@@ -4,7 +4,7 @@ class Solution:
         arrset = set(arr)
         for i in arrset:
             count = arr.count(i)
-            if count == i and  i > ans:  
+            if count == i :  
                 ans = i
         return ans      
 
