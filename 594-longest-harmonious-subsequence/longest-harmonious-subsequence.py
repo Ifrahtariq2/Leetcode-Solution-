@@ -6,14 +6,6 @@ class Solution:
         for rt in range(len(nums)):
             while nums[rt] - nums[lf] > 1:
                 lf += 1
-            if nums[rt] - nums[lf] == 1:    
-                maxlen = max(maxlen,rt-lf+1)
-        return maxlen       
-      
-    
-            
-    
-
-         
-        
-        
+            if nums[rt] - nums[lf] == 1:
+                maxlen = max(maxlen, rt -lf + 1)    
+        return maxlen
