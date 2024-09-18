@@ -3,7 +3,7 @@ class Solution:
         wealth = 0
         for i in range(len(accounts)):
             w = sum(accounts[i])
-            if wealth < w:
-                wealth = w
+            wealth = max(wealth, w)
         return wealth    
+
         
