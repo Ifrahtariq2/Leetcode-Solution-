@@ -4,10 +4,9 @@ class Solution:
         max_profit = 0
         for i in prices:
             if i < min_price:
-               min_price = i
+                min_price = i
             profit = i - min_price
-            if profit > max_profit:
-                max_profit = profit
-        return max_profit        
-
+            if max_profit < profit:
+                max_profit = profit    
+        return max_profit
         
