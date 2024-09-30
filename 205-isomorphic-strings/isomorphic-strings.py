@@ -4,13 +4,14 @@ class Solution:
             return False
         dict1 = {}
         dict2 = {}
-        zipped = zip(s,t)
-        for i , j in zip(s,t):
+        zipped = zip(s,t)    
+        for i, j in zipped:
             if i in dict1 and j != dict1[i]:
-                return False     
-            elif j in dict2 and i != dict2[j]:
-                return False   
+                return False
+            if j in dict2 and i != dict2[j]:
+                return False
             else:
                 dict1[i] = j
-                dict2[j] = i        
-        return True        
+                dict2[j] = i
+        return True            
+        
