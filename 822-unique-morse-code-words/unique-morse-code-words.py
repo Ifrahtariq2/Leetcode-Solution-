@@ -27,13 +27,13 @@ class Solution:
            "y" : "-.--",
            "z" : "--.."
         }
-        res = []
+        res = set()
         for i in words:
             ans = ""
             for j in i:
                 ans += morse[j]
-            if ans not in res:
-                res.append(ans)
+            
+            res.add(ans)
         return len(res)
 
             
