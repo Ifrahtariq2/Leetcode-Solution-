@@ -1,7 +1,6 @@
 class Solution:
     def uniqueMorseRepresentations(self, words: List[str]) -> int:
-        morse = {
-           "a" : ".-",
+        morse = {"a" : ".-",
            "b" : "-...",
            "c" : "-.-.",
            "d" : "-..",
@@ -29,13 +28,16 @@ class Solution:
            "z" : "--.."
         }
         res = []
-        for i in range(len(words)):
+        for i in words:
+            ans = ""
+            for j in i:
+                ans += morse[j]
+            if ans not in res:
+                res.append(ans)
+        return len(res)
+
             
-            ans  = ""
-            lf = 0
-            while lf < len(words[i]):
-                ans += morse[words[i][lf]] 
-                lf += 1
-            res.append(ans)
-        return len(set(res))
+            
+
+
         
