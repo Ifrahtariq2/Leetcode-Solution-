@@ -1,8 +1,11 @@
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
-        array = []
-        currsum = 0 
+        ans = []
+        currsm = 0
         for i in nums:
-            currsum += i
-            array.append(currsum)
-        return  array    
+            currsm += i
+            ans.append(currsm)
+        return ans
+
+
+        
